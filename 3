@@ -1,0 +1,24 @@
+1. CREATE A NEW FOLDER NAMED- DOCKER-DEMO
+2. CREATE 3 FILES IN THAT - 1. INDEX.HTML 2. DOCKERFILE 3. docker-compose.yml
+3. index.html 
+    <h1> hi welcome to container </h1>
+4. dockerfile
+    FROM nginx
+    COPY html /usr/share/nginx/html/index.html
+5. docker-compose.yml
+    version:'3'
+    services:
+      web1:
+        image: nginx
+        ports:
+          - "8081:80"
+      web2:
+        image: nginx
+        ports:
+          - "8082:80"
+6. GO TO DOCKER-DEMO FOLDER PATH -> CTRL A -> cmd
+7. docker build -t myimage .
+8. docker run -d -p 8080:80 --name myimages myimage
+9. docker-compose up -d
+10 docker ps
+11 docker-compose down
