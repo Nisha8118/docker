@@ -1,0 +1,22 @@
+docker --version
+docker version
+docker info
+docker pull hello-world
+docker pull ubuntu
+docker pull nginx
+docker images
+docker run hello-world
+docker run -it --name myubuntu ubuntu bash
+docker ps -a
+docker start myubuntu
+docker exec -it myubuntu bash
+exit
+docker restart myubuntu
+docker inspect myubuntu
+docker stop myubuntu
+docker rm myubuntu
+docker run -d -p 8080:80 --name mynginx nginx
+docker port mynginx
+docker logs mynginx
+docker stop mynginx
+docker rm mynginx
