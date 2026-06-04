@@ -1,1 +1,10 @@
-
+DOCKER APP -> KUBERNETES -> CREATE ONE (5 MINS) ENABLE KUBERNETES
+COMMAND PROMPT
+kubectl create deployment mynginxapp --image=nginx
+kubectl get pods
+kubectl expose deployment mynginxapp --type=NodePort --port=80
+kubectl get services mynginxapp
+port number
+kubectl port-forward deployment mynginxapp/nginx 8080:80
+kubectl delete deployment mynginxapp
+kubectl delete service nginx
