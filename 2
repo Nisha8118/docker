@@ -1,0 +1,19 @@
+1. CREATE A NEW FOLDER NAMED - DOCKER-DEMO
+2. CREATE 2 FILES INSIDE THAT FOLDER ------ 1. INDEX.HTML 2. DOCKERFILE (WITH NO EXTEN)
+3. INDEX.HTML <H2> HI HELLO NAMASTE </H2>
+4. DOCKERFILE FROM nginx COPY index.html /usr/share/nginx/html/index.html
+5. BACK TO DOCKER-DEMO, SELECT ENTIRE PATH, TYPE CMD - THIS OPENS COMMAND PROMPT
+
+
+Cmd: 
+	1 docker build --no-cache -t myimage .
+	2 docker images
+	3 docker run -d -p 8080:80 --name myimages myimage
+	4 docker stop myimages
+	5 docker rm myimages
+	6 docker login
+	7 docker tag myimage nishakn8118/myimage
+	8 docker push nishakn8118/myimage
+	9 docker rmi nishakn8118/myimage
+	10 docker pull nishakn8118/myimage
+	11 docker run -p 8080:80 nishakn8118/myimage
